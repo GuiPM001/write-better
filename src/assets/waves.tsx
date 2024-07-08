@@ -46,10 +46,10 @@ const Layer5 = () => (
   </svg>
 );
 
-const LayerStyled = ({ children }: any) => {
+const LayerStyled = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className="w-screen h-screen flex items-end justify-center">
-      {children}
+    <div className={`w-screen h-screen flex items-end justify-center ${props.className}`}>
+      {props.children}
     </div>
   );
 };
@@ -58,31 +58,31 @@ export const Waves = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={`fixed left-0 bottom-0 scale-125 h-screen w-screen ${props.className}`}>
       <MouseParallax enableOnTouchDevice strength={0.025} isAbsolutelyPositioned>
-        <LayerStyled>
+        <LayerStyled className="animate-movimentright">
           <Layer1 />
         </LayerStyled>
       </MouseParallax>
 
-      <MouseParallax enableOnTouchDevice strength={0.05} isAbsolutelyPositioned>
-        <LayerStyled>
+      <MouseParallax enableOnTouchDevice strength={0.050} isAbsolutelyPositioned>
+        <LayerStyled className="animate-movimentLeft">
           <Layer2 />
         </LayerStyled>
       </MouseParallax>
 
       <MouseParallax enableOnTouchDevice strength={0.075} isAbsolutelyPositioned>
-        <LayerStyled>
+        <LayerStyled className="animate-movimentRight">
           <Layer3 />
         </LayerStyled>
       </MouseParallax>
 
-      <MouseParallax enableOnTouchDevice strength={0.1} isAbsolutelyPositioned>
-        <LayerStyled>
+      <MouseParallax enableOnTouchDevice strength={0.100} isAbsolutelyPositioned>
+        <LayerStyled className="animate-movimentLeft">
           <Layer4 />
         </LayerStyled>
       </MouseParallax>
 
-      <MouseParallax enableOnTouchDevice strength={0.15} isAbsolutelyPositioned>
-        <LayerStyled>
+      <MouseParallax enableOnTouchDevice strength={0.125} isAbsolutelyPositioned>
+        <LayerStyled className="animate-movimentRight">
           <Layer5 />
         </LayerStyled>
       </MouseParallax>
