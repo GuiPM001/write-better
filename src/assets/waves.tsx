@@ -58,7 +58,7 @@ export const Waves = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={`fixed left-0 bottom-0 scale-125 h-screen w-screen ${props.className}`}>
       <MouseParallax enableOnTouchDevice strength={0.025} isAbsolutelyPositioned>
-        <LayerStyled className="animate-movimentright">
+        <LayerStyled className="animate-movimentRight">
           <Layer1 />
         </LayerStyled>
       </MouseParallax>
