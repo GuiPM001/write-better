@@ -5,6 +5,7 @@ import { useCheckDiff } from "./hooks/useCheckDiff.hook";
 import { IaResponse } from "./types/IaResponse";
 import { Background } from "./components/Background";
 import { Container } from "components/Container";
+import { SuggestionContainer } from "components/SuggestionContainer";
 
 function App() {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <Background>
-      <div className="bg-slate-100 bg-opacity-50 rounded-2xl z-50 flex flex-col items-center justify-center px-8 py-6 gap-8 backdrop-blur-lg">
+      <div className="bg-slate-100 bg-opacity-75 rounded-2xl z-50 flex flex-col items-center justify-center px-8 py-6 gap-8 backdrop-blur-lg">
         <Container>
           <h1 className="text-blue-500 text-5xl font-black">Write Better!</h1>
 
@@ -41,6 +42,8 @@ function App() {
             errors through an AI correction.
           </p>
         </Container>
+
+        <SuggestionContainer />
 
         <Container>
           <textarea

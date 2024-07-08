@@ -37,7 +37,7 @@ export const RevisionContainer = (props: RevisionContainerProps) => {
           </div>
 
           <div className="w-full">
-            <span className="text-slate-700 font-semibold">Explanations:</span>
+            <p className="text-slate-700 font-semibold">Explanations:</p>
             <span className="text-slate-600 whitespace-pre-line">
               {explanations}
             </span>
