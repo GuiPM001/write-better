@@ -15,7 +15,8 @@ export const correctText = async (text: string) => {
 }
 
 export const getSuggestion = async () => {
-  const prompt = `Suggest one random topic so that an intermediate-level student can write a mini text
+  const prompt = `Suggest one topic so that anyone can write a text about it.
+                  Disregard previous suggestions.
                   Write your answer just with the topic`;
 
   const result = await model.generateContent(prompt);
