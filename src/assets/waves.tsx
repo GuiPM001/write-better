@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes } from "react";
 import { MouseParallax } from "react-just-parallax";
 
 const Layer1 = () => (
